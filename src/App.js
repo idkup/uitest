@@ -17,9 +17,9 @@ function App() {
 		const images = importAll(require.context('./', false, /\.(png|jpe?g|svg)$/));
         <img src={logo} className="App-logo" alt="logo" />
         const stmt = await env.db.prepare('SELECT * FROM mons').run()
-		for (let i in stmt) {
-			console.log(`${i}`)
-		}
+		stmt.forEach(element => {
+			console.log(`mon: ${`element`}`)
+		});
       </header>
     </div>
   );
